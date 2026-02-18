@@ -168,7 +168,7 @@ Memory = temporary changes.
 
 ---
 
-## 8. Final Summary
+## 8. Summary
 
 - State variables live in storage.
 - Storage is permanent and costs gas to modify.

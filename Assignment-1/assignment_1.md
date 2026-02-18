@@ -1,6 +1,6 @@
 # Assignment 1
 
-## Topic: Understanding Storage, Memory, and Mappings in Solidity (Simple Explanation)
+## Topic: Understanding Storage, Memory, and Mappings in Solidity
 
 ---
 
@@ -139,7 +139,7 @@ That is why we don’t need to specify memory or storage when declaring mappings
 
 ---
 
-## 7. Storage vs Memory (Very Important)
+## 7. Storage vs Memory
 
 If you write:
 
@@ -168,7 +168,7 @@ Memory = temporary changes.
 
 ---
 
-## 8. Final Summary (Simple Version)
+## 8. Final Summary
 
 - State variables live in storage.
 - Storage is permanent and costs gas to modify.
@@ -180,4 +180,3 @@ Memory = temporary changes.
 - Memory creates temporary copies.
 
 Understanding this helps you write secure and gas-efficient smart contracts.
-

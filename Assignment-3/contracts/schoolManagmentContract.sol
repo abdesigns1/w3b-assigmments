@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
-
 contract SchoolManagement {
 
-   
 
     struct Student {
         string name;
-        uint256 level; // 100 - 400
+        uint256 level; 
         uint256 schoolFee;
         bool hasPaid;
         uint256 paymentTimestamp;

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract PropertyManagement is AccessControl {
 
-    // Define roles
+
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
     // ERC20 token used for payment
@@ -35,9 +35,9 @@ contract PropertyManagement is AccessControl {
 
     uint256[] public propertyIds;
 
-    // =============================
-    // CREATE PROPERTY
-    // =============================
+  
+    // CREATE PROPERTY FUNCTION
+   
     function createProperty(
         string memory _name,
         string memory _location,
@@ -58,16 +58,15 @@ contract PropertyManagement is AccessControl {
         propertyIds.push(propertyCount);
     }
 
-    // =============================
-    // REMOVE PROPERTY
-    // =============================
+
+    // FUNCTION TO REMOVE PROPERTY
+   
     function removeProperty(uint256 _id) external onlyRole(ADMIN_ROLE) {
         delete properties[_id];
     }
 
-    // =============================
-    // GET ALL PROPERTIES
-    // =============================
+    // FUNCTION FOR GETING ALL PROPERTIES
+
     function getAllProperties() external view returns (Property[] memory) {
 
         Property[] memory allProperties = new Property[](propertyIds.length);
@@ -79,9 +78,8 @@ contract PropertyManagement is AccessControl {
         return allProperties;
     }
 
-    // =============================
-    // BUY PROPERTY
-    // =============================
+    // BUY PROPERTY FUNCTION
+
     function buyProperty(uint256 _id) external {
 
         Property storage property = properties[_id];
@@ -101,9 +99,9 @@ contract PropertyManagement is AccessControl {
         property.forSale = false;
     }
 
-    // =============================
-    // SET PROPERTY FOR SALE AGAIN
-    // =============================
+
+    // FUNCTION TO SET PROPERTY FOR SALE AGAIN
+
     function setForSale(uint256 _id, uint256 _newPrice) external {
 
         Property storage property = properties[_id];

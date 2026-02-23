@@ -134,6 +134,7 @@ contract SchoolManagement {
         emit StaffPaid(_staff, msg.value, block.timestamp);
     }
 
+// GETTERS
     function getStaff(address _staff) external view returns (Staff memory) {
         return staffs[_staff];
     }
